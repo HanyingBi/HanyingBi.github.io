@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="My name">
 
-<title>Hanying Bi</title>
+<title>EPPS 6323: Lab01 R programming basics I – Hanying Bi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -123,11 +124,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Lab01.html"> 
+    <a class="nav-link active" href="./Lab01.html" aria-current="page"> 
 <span class="menu-text">Lab01</span></a>
   </li>  
   <li class="nav-item">
@@ -150,254 +151,230 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-problems-do-you-encounter-when-working-with-the-dataset" id="toc-what-problems-do-you-encounter-when-working-with-the-dataset" class="nav-link active" data-scroll-target="#what-problems-do-you-encounter-when-working-with-the-dataset">What problems do you encounter when working with the dataset?</a></li>
-  <li><a href="#how-to-deal-with-missing-values" id="toc-how-to-deal-with-missing-values" class="nav-link" data-scroll-target="#how-to-deal-with-missing-values">How to deal with missing values?</a></li>
+  <li><a href="#r-programming-basic-commands" id="toc-r-programming-basic-commands" class="nav-link active" data-scroll-target="#r-programming-basic-commands">R Programming Basic Commands</a>
+  <ul class="collapse">
+  <li><a href="#create-object-using-the-assignment-operator--" id="toc-create-object-using-the-assignment-operator--" class="nav-link" data-scroll-target="#create-object-using-the-assignment-operator--">Create object using the assignment operator (&lt;-, =)</a></li>
+  <li><a href="#using-function" id="toc-using-function" class="nav-link" data-scroll-target="#using-function">Using function</a></li>
+  <li><a href="#using---operators" id="toc-using---operators" class="nav-link" data-scroll-target="#using---operators">Using +, -, *, /,^ operators</a></li>
+  <li><a href="#matrix-operations" id="toc-matrix-operations" class="nav-link" data-scroll-target="#matrix-operations">Matrix operations</a></li>
+  <li><a href="#simple-descriptive-statistics-base" id="toc-simple-descriptive-statistics-base" class="nav-link" data-scroll-target="#simple-descriptive-statistics-base">Simple descriptive statistics (base)</a></li>
+  <li><a href="#visualization-using-r-graphics-without-packages" id="toc-visualization-using-r-graphics-without-packages" class="nav-link" data-scroll-target="#visualization-using-r-graphics-without-packages">Visualization using R Graphics (without packages)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-
-<p>Website for Assignment1</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'haven' was built under R version 4.4.3</code></pre>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">EPPS 6323: Lab01 R programming basics I</h1>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>TEDS_2016 <span class="ot">&lt;-</span> haven<span class="sc">::</span><span class="fu">read_dta</span>(<span class="st">"https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>My name </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="r-programming-basic-commands" class="level1">
+<h1>R Programming Basic Commands</h1>
+<section id="create-object-using-the-assignment-operator--" class="level2">
+<h2 class="anchored" data-anchor-id="create-object-using-the-assignment-operator--">Create object using the assignment operator (&lt;-, =)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(TEDS_2016)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 54
-  District      Sex     Age     Edu     Arear   Career  Career8 Ethnic  Party   
-  &lt;dbl+lbl&gt;     &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+lb&gt;
-1 201 [Yi Lan … 2 [Fem… 4 [50-… 4 [Col… 1 [Tai… 1 [Hig… 1 [Civ… 1 [Tai… 25 [Neu…
-2 201 [Yi Lan … 2 [Fem… 2 [30-… 5 [Abo… 1 [Tai… 2 [Low… 3 [CLE… 2 [Bot… 25 [Neu…
-3 201 [Yi Lan … 1 [Mal… 5 [Abo… 5 [Abo… 1 [Tai… 1 [Hig… 1 [Civ… 2 [Bot…  3 [Lea…
-4 201 [Yi Lan … 1 [Mal… 4 [50-… 2 [Jun… 1 [Tai… 4 [WOR… 4 [Lab… 1 [Tai… 25 [Neu…
-5 201 [Yi Lan … 2 [Fem… 5 [Abo… 1 [Bel… 1 [Tai… 3 [FAR… 5 [FAR… 9 [Nor… 25 [Neu…
-6 201 [Yi Lan … 2 [Fem… 5 [Abo… 2 [Jun… 1 [Tai… 2 [Low… 7 [Hou… 1 [Tai…  6 [Som…
-# ℹ 45 more variables: PartyID &lt;dbl+lbl&gt;, Tondu &lt;dbl+lbl&gt;, Tondu3 &lt;dbl+lbl&gt;,
-#   nI2 &lt;dbl+lbl&gt;, votetsai &lt;dbl&gt;, green &lt;dbl&gt;, votetsai_nm &lt;dbl&gt;,
-#   votetsai_all &lt;dbl&gt;, Independence &lt;dbl&gt;, Unification &lt;dbl&gt;, sq &lt;dbl&gt;,
-#   Taiwanese &lt;dbl&gt;, edu &lt;dbl&gt;, female &lt;dbl&gt;, whitecollar &lt;dbl&gt;,
-#   lowincome &lt;dbl&gt;, income &lt;dbl&gt;, income_nm &lt;dbl&gt;, age &lt;dbl&gt;, KMT &lt;dbl&gt;,
-#   DPP &lt;dbl&gt;, npp &lt;dbl&gt;, noparty &lt;dbl&gt;, pfp &lt;dbl&gt;, South &lt;dbl&gt;, north &lt;dbl&gt;,
-#   Minnan_father &lt;dbl&gt;, Mainland_father &lt;dbl&gt;, Econ_worse &lt;dbl&gt;, …</code></pre>
+<pre><code>[1] 1 3 2 5</code></pre>
 </div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(TEDS_2016)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">2</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    District         Sex             Age           Edu            Arear      
- Min.   : 201   Min.   :1.000   Min.   :1.0   Min.   :1.000   Min.   :1.000  
- 1st Qu.:1401   1st Qu.:1.000   1st Qu.:2.0   1st Qu.:2.000   1st Qu.:1.000  
- Median :6406   Median :1.000   Median :3.0   Median :3.000   Median :3.000  
- Mean   :4661   Mean   :1.486   Mean   :3.3   Mean   :3.334   Mean   :2.744  
- 3rd Qu.:6604   3rd Qu.:2.000   3rd Qu.:5.0   3rd Qu.:5.000   3rd Qu.:4.000  
- Max.   :6806   Max.   :2.000   Max.   :5.0   Max.   :9.000   Max.   :6.000  
-                                                                             
-     Career         Career8          Ethnic          Party      
- Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   : 1.00  
- 1st Qu.:1.000   1st Qu.:2.000   1st Qu.:1.000   1st Qu.: 5.00  
- Median :2.000   Median :4.000   Median :1.000   Median : 7.00  
- Mean   :2.683   Mean   :3.811   Mean   :1.658   Mean   :13.02  
- 3rd Qu.:4.000   3rd Qu.:5.000   3rd Qu.:2.000   3rd Qu.:25.00  
- Max.   :5.000   Max.   :8.000   Max.   :9.000   Max.   :26.00  
-                                                                
-    PartyID          Tondu           Tondu3           nI2       
- Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   : 1.00  
- 1st Qu.:2.000   1st Qu.:3.000   1st Qu.:2.000   1st Qu.: 1.00  
- Median :2.000   Median :4.000   Median :2.000   Median : 3.00  
- Mean   :4.522   Mean   :4.127   Mean   :2.667   Mean   :35.13  
- 3rd Qu.:9.000   3rd Qu.:5.000   3rd Qu.:3.000   3rd Qu.:98.00  
- Max.   :9.000   Max.   :9.000   Max.   :9.000   Max.   :98.00  
-                                                                
-    votetsai          green         votetsai_nm      votetsai_all   
- Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
- 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000  
- Median :1.0000   Median :0.0000   Median :1.0000   Median :1.0000  
- Mean   :0.6265   Mean   :0.3781   Mean   :0.6265   Mean   :0.5478  
- 3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:1.0000  
- Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
- NA's   :429                       NA's   :429      NA's   :248     
-  Independence     Unification           sq           Taiwanese     
- Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
- 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000  
- Median :0.0000   Median :0.0000   Median :1.0000   Median :1.0000  
- Mean   :0.2888   Mean   :0.1225   Mean   :0.5172   Mean   :0.6272  
- 3rd Qu.:1.0000   3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:1.0000  
- Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
-                                                                    
-      edu            female        whitecollar       lowincome    
- Min.   :1.000   Min.   :0.0000   Min.   :0.0000   Min.   :1.000  
- 1st Qu.:2.000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:4.000  
- Median :3.000   Median :0.0000   Median :1.0000   Median :5.000  
- Mean   :3.301   Mean   :0.4864   Mean   :0.5373   Mean   :4.343  
- 3rd Qu.:5.000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:5.000  
- Max.   :5.000   Max.   :1.0000   Max.   :1.0000   Max.   :5.000  
- NA's   :10                                                       
-     income         income_nm           age              KMT        
- Min.   : 1.000   Min.   : 1.000   Min.   : 20.00   Min.   :0.0000  
- 1st Qu.: 3.000   1st Qu.: 2.000   1st Qu.: 35.00   1st Qu.:0.0000  
- Median : 5.500   Median : 5.000   Median : 49.00   Median :0.0000  
- Mean   : 5.324   Mean   : 5.281   Mean   : 49.11   Mean   :0.2296  
- 3rd Qu.: 7.000   3rd Qu.: 8.000   3rd Qu.: 61.00   3rd Qu.:0.0000  
- Max.   :10.000   Max.   :10.000   Max.   :100.00   Max.   :1.0000  
-                  NA's   :330                                       
-      DPP              npp             noparty            pfp         
- Min.   :0.0000   Min.   :0.00000   Min.   :0.0000   Min.   :0.00000  
- 1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.0000   1st Qu.:0.00000  
- Median :0.0000   Median :0.00000   Median :0.0000   Median :0.00000  
- Mean   :0.3497   Mean   :0.02544   Mean   :0.3716   Mean   :0.01893  
- 3rd Qu.:1.0000   3rd Qu.:0.00000   3rd Qu.:1.0000   3rd Qu.:0.00000  
- Max.   :1.0000   Max.   :1.00000   Max.   :1.0000   Max.   :1.00000  
-                                                                      
-     South            north        Minnan_father    Mainland_father 
- Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
- 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000  
- Median :0.0000   Median :0.0000   Median :1.0000   Median :0.0000  
- Mean   :0.4947   Mean   :0.4799   Mean   :0.7225   Mean   :0.1024  
- 3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:0.0000  
- Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
-                                                                    
-   Econ_worse       Inequality      inequality5      econworse5   
- Min.   :0.0000   Min.   :0.0000   Min.   :1.000   Min.   :1.000  
- 1st Qu.:0.0000   1st Qu.:1.0000   1st Qu.:4.000   1st Qu.:3.000  
- Median :1.0000   Median :1.0000   Median :5.000   Median :4.000  
- Mean   :0.5544   Mean   :0.9355   Mean   :4.495   Mean   :3.644  
- 3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:5.000   3rd Qu.:4.000  
- Max.   :1.0000   Max.   :1.0000   Max.   :5.000   Max.   :5.000  
-                                                                  
- Govt_for_public     pubwelf5     Govt_dont_care     highincome    
- Min.   :0.0000   Min.   :1.000   Min.   :0.0000   Min.   :0.0000  
- 1st Qu.:0.0000   1st Qu.:2.000   1st Qu.:0.0000   1st Qu.:0.0000  
- Median :0.0000   Median :3.000   Median :0.0000   Median :1.0000  
- Mean   :0.4249   Mean   :2.877   Mean   :0.4988   Mean   :0.5765  
- 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:1.0000   3rd Qu.:1.0000  
- Max.   :1.0000   Max.   :5.000   Max.   :1.0000   Max.   :1.0000  
-                                                   NA's   :330     
-    votekmt         votekmt_nm          Blue       Green      No_Party
- Min.   :0.0000   Min.   :0.0000   Min.   :0   Min.   :0   Min.   :0  
- 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0   1st Qu.:0   1st Qu.:0  
- Median :0.0000   Median :0.0000   Median :0   Median :0   Median :0  
- Mean   :0.2053   Mean   :0.2752   Mean   :0   Mean   :0   Mean   :0  
- 3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0  
- Max.   :1.0000   Max.   :1.0000   Max.   :0   Max.   :0   Max.   :0  
-                  NA's   :429                                         
-    voteblue       voteblue_nm       votedpp_1        votekmt_1     
- Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
- 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000  
- Median :0.0000   Median :0.0000   Median :1.0000   Median :0.0000  
- Mean   :0.2787   Mean   :0.3735   Mean   :0.5256   Mean   :0.2309  
- 3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:0.0000  
- Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
-                  NA's   :429      NA's   :187      NA's   :187     </code></pre>
+<pre><code>[1] 1 6 2</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="what-problems-do-you-encounter-when-working-with-the-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="what-problems-do-you-encounter-when-working-with-the-dataset">What problems do you encounter when working with the dataset?</h2>
-<section id="the-problem-im-encountering-is-that-the-dataset-has-many-cols-and-many-missing-values." class="level4">
-<h4 class="anchored" data-anchor-id="the-problem-im-encountering-is-that-the-dataset-has-many-cols-and-many-missing-values.">The problem I’m encountering is that the dataset has many cols and many missing values.</h4>
 </section>
-</section>
-<section id="how-to-deal-with-missing-values" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-deal-with-missing-values">How to deal with missing values?</h2>
-<section id="while-using-the-teds-2016-dataset-missing-values-are-a-significant-factor-that-needs-to-be-taken-care-of-while-performing-statistical-analysis-on-the-given-data.-if-not-handled-carefully-missing-values-might-have-a-considerable-effect-on-the-statistical-analysis-performed-on-the-data." class="level4">
-<h4 class="anchored" data-anchor-id="while-using-the-teds-2016-dataset-missing-values-are-a-significant-factor-that-needs-to-be-taken-care-of-while-performing-statistical-analysis-on-the-given-data.-if-not-handled-carefully-missing-values-might-have-a-considerable-effect-on-the-statistical-analysis-performed-on-the-data.">While using the “TEDS 2016” dataset, missing values are a significant factor that needs to be taken care of while performing statistical analysis on the given data. If not handled carefully, missing values might have a considerable effect on the statistical analysis performed on the data.</h4>
-</section>
-<section id="while-performing-statistical-analysis-on-a-given-dataset-missing-values-might-be-handled-using-several-different-techniques." class="level4">
-<h4 class="anchored" data-anchor-id="while-performing-statistical-analysis-on-a-given-dataset-missing-values-might-be-handled-using-several-different-techniques.">While performing statistical analysis on a given dataset, missing values might be handled using several different techniques.</h4>
-</section>
-<section id="first-missing-values-might-be-completely-removed-using-functions-like-na.omit-or-drop_na." class="level4">
-<h4 class="anchored" data-anchor-id="first-missing-values-might-be-completely-removed-using-functions-like-na.omit-or-drop_na.">First, missing values might be completely removed using functions like “na.omit()” or “drop_na().”</h4>
-</section>
-<section id="second-while-performing-statistical-analysis-like-finding-summary-statistics-for-a-given-variable-missing-values-might-be-completely-ignored-by-using-na.rm-true." class="level4">
-<h4 class="anchored" data-anchor-id="second-while-performing-statistical-analysis-like-finding-summary-statistics-for-a-given-variable-missing-values-might-be-completely-ignored-by-using-na.rm-true.">Second, while performing statistical analysis like finding summary statistics for a given variable, missing values might be completely ignored by using “na.rm = TRUE.”</h4>
-</section>
-<section id="third-while-working-with-a-survey-based-dataset-like-teds-values-like-98-and-99-might-indicate-dont-know-or-refuse-to-answer-so-these-values-must-be-converted-to-na." class="level4">
-<h4 class="anchored" data-anchor-id="third-while-working-with-a-survey-based-dataset-like-teds-values-like-98-and-99-might-indicate-dont-know-or-refuse-to-answer-so-these-values-must-be-converted-to-na.">Third, while working with a survey-based dataset like “TEDS,” values like “98” and “99” might indicate “don’t know” or “refuse to answer,” so these values must be converted to “NA.”</h4>
-</section>
-<section id="finally-missing-values-might-also-be-handled-using-techniques-like-imputation-but-for-exploratory-analysis-missing-values-might-be-completely-removed-or-replaced-with-na." class="level4">
-<h4 class="anchored" data-anchor-id="finally-missing-values-might-also-be-handled-using-techniques-like-imputation-but-for-exploratory-analysis-missing-values-might-be-completely-removed-or-replaced-with-na.">Finally, missing values might also be handled using techniques like imputation, but for exploratory analysis, missing values might be completely removed or replaced with “NA.”</h4>
+<section id="using-function" class="level2">
+<h2 class="anchored" data-anchor-id="using-function">Using function</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(descr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'descr' was built under R version 4.4.3</code></pre>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x)  <span class="co"># What does length() do?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assign label to the values (1=KMT, 2=DPP, 3=NP, 4=PFP, 5=TSU, 6=NPP, 7="NA")</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>TEDS_2016<span class="sc">$</span>PartyID <span class="ot">&lt;-</span> <span class="fu">factor</span>(TEDS_2016<span class="sc">$</span>PartyID, <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"KMT"</span>,<span class="st">"DPP"</span>,<span class="st">"NP"</span>,<span class="st">"PFP"</span>, <span class="st">"TSU"</span>, <span class="st">"NPP"</span>,<span class="st">"NA"</span>))</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">freq</span>(TEDS_2016<span class="sc">$</span>PartyID)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+</section>
+<section id="using---operators" class="level2">
+<h2 class="anchored" data-anchor-id="using---operators">Using +, -, *, /,^ operators</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">+</span>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  2 10  5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>() <span class="co"># List objects in the environment</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "x" "y"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(x,y) <span class="co"># Remove objects</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>character(0)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>()) <span class="co"># Danger! What does this do?  Not recommended!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="matrix-operations" class="level2">
+<h2 class="anchored" data-anchor-id="matrix-operations">Matrix operations</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>?matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>starting httpd help server ... done</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="fu">matrix</span>(<span class="at">data=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">2</span>) <span class="co"># Create a 2x2 matrix object</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    3
+[2,]    2    4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>),<span class="dv">2</span>,<span class="dv">2</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>),<span class="dv">2</span>,<span class="dv">2</span>,<span class="at">byrow=</span>T) <span class="co"># What about byrow=F?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    2
+[2,]    3    4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(x) <span class="co"># What does x look like?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         [,1]     [,2]
+[1,] 1.000000 1.732051
+[2,] 1.414214 2.000000</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    3
+[2,]    2    4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    9
+[2,]    4   16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="fu">rnorm</span>(<span class="dv">50</span>) <span class="co"># Generate a vector of 50 numbers using the rnorm() function</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>y<span class="ot">=</span>x<span class="sc">+</span><span class="fu">rnorm</span>(<span class="dv">50</span>,<span class="at">mean=</span><span class="dv">50</span>,<span class="at">sd=</span>.<span class="dv">1</span>) <span class="co"># What does rnorm(50,mean=50,sd=.1) generate?</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x,y) <span class="co"># Correlation of x and y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9926317</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1303</span>) <span class="co"># Set the seed for Random Number Generator (RNG) to generate values that are reproducible.</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] -1.1439763145  1.3421293656  2.1853904757  0.5363925179  0.0631929665
+ [6]  0.5022344825 -0.0004167247  0.5658198405 -0.5725226890 -1.1102250073
+[11] -0.0486871234 -0.6956562176  0.8289174803  0.2066528551 -0.2356745091
+[16] -0.5563104914 -0.3647543571  0.8623550343 -0.6307715354  0.3136021252
+[21] -0.9314953177  0.8238676185  0.5233707021  0.7069214120  0.4202043256
+[26] -0.2690521547 -1.5103172999 -0.6902124766 -0.1434719524 -1.0135274099
+[31]  1.5732737361  0.0127465055  0.8726470499  0.4220661905 -0.0188157917
+[36]  2.6157489689 -0.6931401748 -0.2663217810 -0.7206364412  1.3677342065
+[41]  0.2640073322  0.6321868074 -1.3306509858  0.0268888182  1.0406363208
+[46]  1.3120237985 -0.0300020767 -0.2500257125  0.0234144857  1.6598706557</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3</span>) <span class="co"># Try different seeds?</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>y<span class="ot">=</span><span class="fu">rnorm</span>(<span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="simple-descriptive-statistics-base" class="level2">
+<h2 class="anchored" data-anchor-id="simple-descriptive-statistics-base">Simple descriptive statistics (base)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01103557</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7328675</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">var</span>(y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8560768</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8560768</code></pre>
+</div>
+</div>
+</section>
+<section id="visualization-using-r-graphics-without-packages" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-using-r-graphics-without-packages">Visualization using R Graphics (without packages)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>y<span class="ot">=</span><span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Lab01_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="cell-output cell-output-stdout">
-<pre><code>TEDS_2016$PartyID 
-      Frequency  Percent
-KMT         388  22.9586
-DPP         591  34.9704
-NP            3   0.1775
-PFP          32   1.8935
-TSU           5   0.2959
-NPP          43   2.5444
-NA          628  37.1598
-Total      1690 100.0000</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyverse' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'purrr' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'forcats' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'lubridate' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   4.0.2     ✔ tibble    3.2.1
-✔ lubridate 1.9.5     ✔ tidyr     1.3.2
-✔ purrr     1.2.1     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>TEDS_2016 <span class="sc">%&gt;%</span> </span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(PartyID) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">perc =</span> n <span class="sc">/</span> <span class="fu">nrow</span>(TEDS_2016)) <span class="ot">-&gt;</span> T2</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(T2, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(PartyID, <span class="sc">-</span>perc),<span class="at">y =</span> perc,<span class="at">fill=</span>PartyID)) <span class="sc">+</span> </span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Party Support (%)"</span>) <span class="sc">+</span> </span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Taiwan Political Parties"</span>) <span class="sc">+</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"steel blue"</span>,<span class="st">"forestgreen"</span>,<span class="st">"khaki1"</span>,<span class="st">"orange"</span>,<span class="st">"goldenrod"</span>,<span class="st">"yellow"</span>,<span class="st">"grey"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">pch=</span><span class="dv">20</span>, <span class="at">col =</span> <span class="st">"firebrick"</span>) <span class="co"># Scatterplot for two numeric variables by default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Lab01_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">pch=</span><span class="dv">20</span>, <span class="at">col =</span> <span class="st">"steelblue"</span>,<span class="at">xlab=</span><span class="st">"this is the x-axis"</span>,<span class="at">ylab=</span><span class="st">"this is the y-axis"</span>,<span class="at">main=</span><span class="st">"Plot of X vs Y"</span>) <span class="co"># Add labels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab01_files/figure-html/unnamed-chunk-6-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="st">"Figure01.pdf"</span>) <span class="co"># Save as pdf, add a path or it will be stored on the project directory</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y,<span class="at">pch=</span><span class="dv">20</span>, <span class="at">col=</span><span class="st">"forestgreen"</span>) <span class="co"># Try different colors?</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>() <span class="co"># Close the file using the dev.off function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>png 
+  2 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>) <span class="co"># Same as x=c(1:10)</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="fu">seq</span>(<span class="sc">-</span>pi,pi,<span class="at">length=</span><span class="dv">50</span>)</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>y<span class="ot">=</span>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
