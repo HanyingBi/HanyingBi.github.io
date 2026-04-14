@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Assignment 2 – Hanying Bi</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Hanying Bi</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab01.html"> 
+<span class="menu-text">Lab01</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab02.html"> 
+<span class="menu-text">Lab02</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./Assignment2.html" aria-current="page"> 
+<span class="menu-text">Assignment2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Assignment3.html"> 
+<span class="menu-text">Assignment3</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assignment-2-prompt-exercise" id="toc-assignment-2-prompt-exercise" class="nav-link active" data-scroll-target="#assignment-2-prompt-exercise">Assignment 2: Prompt Exercise</a>
+  <ul class="collapse">
+  <li><a href="#step-1-initial-prompt" id="toc-step-1-initial-prompt" class="nav-link" data-scroll-target="#step-1-initial-prompt">Step 1: Initial Prompt</a></li>
+  <li><a href="#step-2-model-outputs" id="toc-step-2-model-outputs" class="nav-link" data-scroll-target="#step-2-model-outputs">Step 2: Model Outputs</a>
+  <ul class="collapse">
+  <li><a href="#chatgpt-summary" id="toc-chatgpt-summary" class="nav-link" data-scroll-target="#chatgpt-summary">ChatGPT (Summary)</a></li>
+  <li><a href="#gemini-summary" id="toc-gemini-summary" class="nav-link" data-scroll-target="#gemini-summary">Gemini (Summary)</a></li>
+  <li><a href="#copilot-summary" id="toc-copilot-summary" class="nav-link" data-scroll-target="#copilot-summary">Copilot (Summary)</a></li>
+  </ul></li>
+  <li><a href="#step-2-analysis-of-model-responses" id="toc-step-2-analysis-of-model-responses" class="nav-link" data-scroll-target="#step-2-analysis-of-model-responses">Step 2: Analysis of Model Responses</a>
+  <ul class="collapse">
+  <li><a href="#chatgpt" id="toc-chatgpt" class="nav-link" data-scroll-target="#chatgpt">1. ChatGPT</a></li>
+  <li><a href="#gemini" id="toc-gemini" class="nav-link" data-scroll-target="#gemini">2. Gemini</a></li>
+  <li><a href="#copilot" id="toc-copilot" class="nav-link" data-scroll-target="#copilot">3. Copilot</a></li>
+  </ul></li>
+  <li><a href="#cross-model-comparison" id="toc-cross-model-comparison" class="nav-link" data-scroll-target="#cross-model-comparison">Cross-Model Comparison</a></li>
+  <li><a href="#step-3-refined-prompts" id="toc-step-3-refined-prompts" class="nav-link" data-scroll-target="#step-3-refined-prompts">Step 3: Refined Prompts</a>
+  <ul class="collapse">
+  <li><a href="#prompt-for-chatgpt" id="toc-prompt-for-chatgpt" class="nav-link" data-scroll-target="#prompt-for-chatgpt">Prompt for ChatGPT</a></li>
+  <li><a href="#prompt-for-gemini" id="toc-prompt-for-gemini" class="nav-link" data-scroll-target="#prompt-for-gemini">Prompt for Gemini</a></li>
+  <li><a href="#prompt-for-copilot" id="toc-prompt-for-copilot" class="nav-link" data-scroll-target="#prompt-for-copilot">Prompt for Copilot</a></li>
+  </ul></li>
+  <li><a href="#step-4-synthesis-and-justification" id="toc-step-4-synthesis-and-justification" class="nav-link" data-scroll-target="#step-4-synthesis-and-justification">Step 4: Synthesis and Justification</a></li>
+  <li><a href="#final-systematic-review" id="toc-final-systematic-review" class="nav-link" data-scroll-target="#final-systematic-review">Final Systematic Review</a></li>
+  </ul></li>
+  <li><a href="#applications-of-data-mining-and-machine-learning-across-real-world-domains-a-prisma-aligned-systematic-literature-review" id="toc-applications-of-data-mining-and-machine-learning-across-real-world-domains-a-prisma-aligned-systematic-literature-review" class="nav-link" data-scroll-target="#applications-of-data-mining-and-machine-learning-across-real-world-domains-a-prisma-aligned-systematic-literature-review">Applications of Data Mining and Machine Learning Across Real-World Domains: A PRISMA-Aligned Systematic Literature Review</a>
+  <ul class="collapse">
+  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#results-sectoral-synthesis-using-a-consistent-framework" id="toc-results-sectoral-synthesis-using-a-consistent-framework" class="nav-link" data-scroll-target="#results-sectoral-synthesis-using-a-consistent-framework">Results: Sectoral Synthesis Using a Consistent Framework</a></li>
+  <li><a href="#validation-realism-retrospective-benchmarking-vs-external-vs-prospective" id="toc-validation-realism-retrospective-benchmarking-vs-external-vs-prospective" class="nav-link" data-scroll-target="#validation-realism-retrospective-benchmarking-vs-external-vs-prospective">Validation Realism: Retrospective Benchmarking vs External vs Prospective</a></li>
+  <li><a href="#cross-sector-trends" id="toc-cross-sector-trends" class="nav-link" data-scroll-target="#cross-sector-trends">Cross-Sector Trends</a></li>
+  <li><a href="#research-gaps" id="toc-research-gaps" class="nav-link" data-scroll-target="#research-gaps">Research Gaps</a></li>
+  <li><a href="#hypothesis-3" id="toc-hypothesis-3" class="nav-link" data-scroll-target="#hypothesis-3">Hypothesis</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references-3" id="toc-references-3" class="nav-link" data-scroll-target="#references-3">References</a></li>
+  <li><a href="#step-5-reflection" id="toc-step-5-reflection" class="nav-link" data-scroll-target="#step-5-reflection">Step 5: Reflection</a>
+  <ul class="collapse">
+  <li><a href="#model-differences" id="toc-model-differences" class="nav-link" data-scroll-target="#model-differences">1. Model Differences</a></li>
+  <li><a href="#prompt-refinement" id="toc-prompt-refinement" class="nav-link" data-scroll-target="#prompt-refinement">2. Prompt Refinement</a></li>
+  <li><a href="#key-learning" id="toc-key-learning" class="nav-link" data-scroll-target="#key-learning">3. Key Learning</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment 2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="assignment-2-prompt-exercise" class="level1">
+<h1>Assignment 2: Prompt Exercise</h1>
+<section id="step-1-initial-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-initial-prompt">Step 1: Initial Prompt</h2>
+<p>Prepare a 2,000-word structured systematic literature review examining the applications of data mining and machine learning across real-world sectors. The review should contain a clearly defined methodology section outlining the review approach, synthesize major empirical findings, highlight significant research trends and existing gaps in the literature, and conclude with one well-defined and testable hypothesis grounded in prior studies. Maintain a formal academic tone and organize the paper in accordance with systematic review conventions.</p>
+</section>
+<section id="step-2-model-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-model-outputs">Step 2: Model Outputs</h2>
+<section id="chatgpt-summary" class="level3">
+<h3 class="anchored" data-anchor-id="chatgpt-summary">ChatGPT (Summary)</h3>
+<p>The ChatGPT response follows a strong systematic review structure, including an abstract, methodology aligned with PRISMA guidelines, sector-based synthesis, cross-cutting trends, research gaps, and a well-defined hypothesis. It emphasizes real-world deployment challenges such as external validation, data leakage, and governance.</p>
+</section>
+<section id="gemini-summary" class="level3">
+<h3 class="anchored" data-anchor-id="gemini-summary">Gemini (Summary)</h3>
+<p>The Gemini response focuses on recent developments (2020–2026), highlighting explainable AI, data governance, and emerging technologies such as agentic AI. It emphasizes real-world adoption and long-term sustainability issues such as model drift, but includes some speculative claims.</p>
+</section>
+<section id="copilot-summary" class="level3">
+<h3 class="anchored" data-anchor-id="copilot-summary">Copilot (Summary)</h3>
+<p>The Copilot response provides clear and structured sector-by-sector summaries across healthcare, finance, manufacturing, and public sectors. It highlights empirical applications and identifies common trends such as deep learning adoption and interpretability challenges.</p>
+</section>
+</section>
+<section id="step-2-analysis-of-model-responses" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-analysis-of-model-responses">Step 2: Analysis of Model Responses</h2>
+<section id="chatgpt" class="level3">
+<h3 class="anchored" data-anchor-id="chatgpt">1. ChatGPT</h3>
+<section id="structure" class="level4">
+<h4 class="anchored" data-anchor-id="structure">Structure</h4>
+<ul>
+<li><p>The GPT output follows a strong systematic-review-like structure: Abstract → Introduction → Methodology → Sectoral Results → Cross-cutting Trends → Gaps → Conclusion → Testable Hypothesis.</p></li>
+<li><p>It explicitly references PRISMA 2020 and provides clear subsections for search strategy, eligibility criteria, screening, and data extraction.</p></li>
+<li><p>Limitation:it does not report concrete counts (e.g., number of records retrieved, screened, included) or provide a PRISMA flow diagram, which reduces replicability.</p></li>
+</ul>
+</section>
+<section id="synthesis" class="level4">
+<h4 class="anchored" data-anchor-id="synthesis">Synthesis</h4>
+<ul>
+<li><p>GPT offers the deepest synthesis among the three models. It does not merely list sectors; it compares how DM/ML is used across domains and highlights shared methodological patterns (e.g., retrospective benchmarking vs.&nbsp;prospective evaluation, external validation issues).</p></li>
+<li><p>It integrates “deployment realism” concerns (distribution shift, governance, leakage controls) across sectors, which is aligned with systematic review expectations.</p></li>
+</ul>
+</section>
+<section id="trends-and-gaps" class="level4">
+<h4 class="anchored" data-anchor-id="trends-and-gaps">Trends and gaps</h4>
+<ul>
+<li><p>GPT identifies meaningful and researchable gaps: limited prospective evaluations, weak leakage control reporting, poor transportability across sites, insufficient causal framing, and under-modeled governance/human factors.</p></li>
+<li><p>These gaps are specific and actionable (i.e., they point to concrete methodological shortcomings rather than vague “more research needed” statements).</p></li>
+</ul>
+</section>
+<section id="hypothesis" class="level4">
+<h4 class="anchored" data-anchor-id="hypothesis">Hypothesis</h4>
+<ul>
+<li><p>The hypothesis is well operationalized: explainability (IV) is linked to cross-site generalization (DV) measured as performance degradation between internal and external validation (e.g., ΔAUC, ΔF1).</p></li>
+<li><p>It also proposes an empirical test strategy, which strengthens testability.</p></li>
+</ul>
+</section>
+<section id="references" class="level4">
+<h4 class="anchored" data-anchor-id="references">References</h4>
+<ul>
+<li><p>A major weakness is that GPT does not provide a complete, verifiable APA reference list. It refers to “systematic reviews” and “PRISMA-guided reviews” but does not consistently specify full citations.</p></li>
+<li><p>This increases the need for external verification using Google Scholar or Semantic Scholar.</p></li>
+</ul>
+</section>
+<section id="overall" class="level4">
+<h4 class="anchored" data-anchor-id="overall">Overall</h4>
+<ul>
+<li><p>Overall strengths: methodological depth; strong cross-domain synthesis; rigorous, measurable hypothesis.</p></li>
+<li><p>Overall weaknesses: incomplete citation transparency; missing explicit PRISMA counts/flow; primarily narrative synthesis rather than quantitative aggregation.</p></li>
+</ul>
+</section>
+</section>
+<section id="gemini" class="level3">
+<h3 class="anchored" data-anchor-id="gemini">2. Gemini</h3>
+<section id="structure-1" class="level4">
+<h4 class="anchored" data-anchor-id="structure-1">Structure</h4>
+<ul>
+<li><p>Gemini provides a conventional structure (Abstract → Introduction → Methodology → Findings → Trends/Gaps → Conclusion/Hypothesis) and explicitly lists databases and a time window (2020–2026).</p></li>
+<li><p>It claims PRISMA alignment and also references “Kitchenham methodology,” which adds a methodological signal.</p></li>
+<li><p>Limitation:it asserts the inclusion of “58 primary studies and 12 meta-analyses” but does not show how these numbers were obtained (no screening details or study list).</p></li>
+</ul>
+</section>
+<section id="synthesis-1" class="level4">
+<h4 class="anchored" data-anchor-id="synthesis-1">Synthesis</h4>
+<ul>
+<li><p>Gemini’s synthesis emphasizes recent developments (e.g., explainability, governance, “agentic AI”) and frames sector evolution as moving from pilot to production.</p></li>
+<li><p>However, it is more trend-driven than evidence-driven: several numerical claims (e.g., market size, percentages, forecasting statements) are not supported with citations, and some statements read like industry commentary rather than peer-reviewed synthesis.</p></li>
+</ul>
+</section>
+<section id="trends-and-gaps-1" class="level4">
+<h4 class="anchored" data-anchor-id="trends-and-gaps-1">Trends and gaps</h4>
+<ul>
+<li><p>Strong points include attention to model drift and sustainability over time, data quality constraints, and cross-sector bias auditing needs.</p></li>
+<li><p>Weakness:some trends are speculative (e.g., “Physical AI,” broad claims about 2026 adoption) and would require careful verification. These reduce academic precision unless well-cited.</p></li>
+</ul>
+</section>
+<section id="hypothesis-1" class="level4">
+<h4 class="anchored" data-anchor-id="hypothesis-1">Hypothesis</h4>
+<ul>
+<li><p>The hypothesis connects interpretable explanations (e.g., SHAP/LIME) to long-term user adherence (&gt;12 months), which is conceptually aligned with adoption literature and is measurable in principle.</p></li>
+<li><p>Limitation:key constructs (e.g., “adherence,” “stakeholder adoption,” and the baseline accuracy threshold) are not clearly justified and may be confounded by regulation, sector context, and implementation differences.</p></li>
+</ul>
+</section>
+<section id="references-1" class="level4">
+<h4 class="anchored" data-anchor-id="references-1">References</h4>
+<ul>
+<li><p>Gemini includes several time-sensitive and market-style claims (e.g., “Gartner (2026) forecasts…”), but it does not provide full citations.</p></li>
+<li><p>Overall citation reliability risk is high without verification.</p></li>
+</ul>
+</section>
+<section id="overall-1" class="level4">
+<h4 class="anchored" data-anchor-id="overall-1">Overall</h4>
+<ul>
+<li><p>Overall strengths: strong future-facing framing; highlights governance and drift; adoption-oriented hypothesis.</p></li>
+<li><p>Overall weaknesses: speculative/industry-style claims; unclear empirical grounding for numbers; incomplete, non-verifiable references.</p></li>
+</ul>
+</section>
+</section>
+<section id="copilot" class="level3">
+<h3 class="anchored" data-anchor-id="copilot">3. Copilot</h3>
+<section id="structure-2" class="level4">
+<h4 class="anchored" data-anchor-id="structure-2">Structure</h4>
+<ul>
+<li><p>Copilot delivers a clean and readable systematic review structure with a clearly labeled methodology section (databases, keywords, inclusion/exclusion, extraction fields).</p></li>
+<li><p>It uses PRISMA principles at a high level and maintains consistent headings across domains.</p></li>
+<li><p>Limitation:like the other models, it does not report screening counts or a study selection breakdown.</p></li>
+</ul>
+</section>
+<section id="synthesis-2" class="level4">
+<h4 class="anchored" data-anchor-id="synthesis-2">Synthesis</h4>
+<ul>
+<li><p>Copilot provides strong sector-by-sector summaries and includes concrete examples of applications (healthcare, finance, manufacturing, retail, transportation, public administration).</p></li>
+<li><p>However, the synthesis is more descriptive than integrative: it summarizes each domain well but provides less cross-sector theoretical linkage than GPT (e.g., fewer cross-cutting comparisons of evaluation realism, external validity, or causal vs.&nbsp;predictive aims).</p></li>
+</ul>
+</section>
+<section id="trends-and-gaps-2" class="level4">
+<h4 class="anchored" data-anchor-id="trends-and-gaps-2">Trends and gaps</h4>
+<ul>
+<li><p>Copilot identifies a coherent set of trends (deep learning, hybrid/ensemble models, real-time analytics, explainability, regulation) and gaps (generalization, data quality, longitudinal evaluation, interpretability-performance trade-offs, ethics).</p></li>
+<li><p>These are generally relevant, though they remain somewhat high-level compared to GPT’s more method-specific critique (e.g., leakage control, deployment constraints, distribution shift auditing).</p></li>
+</ul>
+</section>
+<section id="hypothesis-2" class="level4">
+<h4 class="anchored" data-anchor-id="hypothesis-2">Hypothesis</h4>
+<ul>
+<li><p>The hypothesis is straightforward: explainability techniques increase trust and adoption in high-stakes sectors.</p></li>
+<li><p>Limitation:it lacks operational measurement detail and does not propose an empirical design (e.g., how adoption will be measured, what controls are needed).</p></li>
+</ul>
+</section>
+<section id="references-2" class="level4">
+<h4 class="anchored" data-anchor-id="references-2">References</h4>
+<ul>
+<li>Copilot also does not provide a full APA reference list; therefore, references cannot be directly verified.</li>
+</ul>
+</section>
+<section id="overall-2" class="level4">
+<h4 class="anchored" data-anchor-id="overall-2">Overall</h4>
+<ul>
+<li><p>Overall strengths: clarity and organization; broad coverage; well-structured trends and gaps.</p></li>
+<li><p>Overall weaknesses: less cross-domain integration; hypothesis less operationalized; missing verifiable citations.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="cross-model-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="cross-model-comparison">Cross-Model Comparison</h2>
+<ul>
+<li><p>GPT is strongest in methodological sophistication and cross-sector synthesis, and it proposes the most operationalized, research-ready hypothesis. Its main weakness is incomplete citation transparency and missing PRISMA-style counts.</p></li>
+<li><p>Gemini provides the most forward-looking perspective and emphasizes governance, drift, and adoption, but it introduces speculative or industry-style claims that reduce empirical rigor without strong citations.</p></li>
+<li><p>Copilot is the clearest and most consistently structured, offering solid sector summaries and well-organized trends/gaps, but it is less analytically integrative and provides a simpler, less operational hypothesis.</p></li>
+</ul>
+</section>
+<section id="step-3-refined-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-refined-prompts">Step 3: Refined Prompts</h2>
+<section id="prompt-for-chatgpt" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-for-chatgpt">Prompt for ChatGPT</h3>
+<p>For GPT： Produce a 2,000-word PRISMA-aligned systematic literature review on the applications of data mining and machine learning across real-world domains (e.g., healthcare, finance, manufacturing, transportation).</p>
+<p>Requirements</p>
+<p>1.Methodology</p>
+<ul>
+<li><p>Explicitly state databases searched (minimum three),</p></li>
+<li><p>Provide example search strings,</p></li>
+<li><p>Report hypothetical study counts (records identified, screened, excluded, included),</p></li>
+<li><p>Describe inclusion/exclusion criteria clearly.</p></li>
+</ul>
+<p>2.Results Synthesis:</p>
+<ul>
+<li><p>Compare findings across sectors using a consistent analytical framework (task type, model family, evaluation metrics, deployment constraints).</p></li>
+<li><p>Distinguish between retrospective benchmarking and real-world prospective validation.</p></li>
+</ul>
+<p>3.Trends and Gaps:</p>
+<ul>
+<li>Identify 3–5 research gaps and explain how each can be empirically addressed.</li>
+</ul>
+<p>4.Hypothesis</p>
+<ul>
+<li>Provide one clearly operationalized, testable hypothesis with defined independent and dependent variables, measurable indicators, and a brief proposed empirical design.</li>
+</ul>
+<p>5.References</p>
+<ul>
+<li>Provide 12–15 verifiable peer-reviewed references in APA format with DOIs. Avoid generic or unverifiable citations.</li>
+</ul>
+<p>Maintain a rigorous academic tone and ensure methodological transparency consistent with systematic review reporting standards.</p>
+</section>
+<section id="prompt-for-gemini" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-for-gemini">Prompt for Gemini</h3>
+<p>Write a 2,000-word structured systematic literature review on the applications of data mining and machine learning in healthcare, finance, manufacturing, and education.</p>
+<p>Requirements</p>
+<p>1.Use a strict structure: Introduction → Methodology → Sectoral Synthesis → Cross-Sector Trends → Research Gaps → Hypothesis → Conclusion.</p>
+<p>2.Limit claims to peer-reviewed empirical studies. Avoid market forecasts, speculative projections, or industry-only statistics unless fully cited.</p>
+<p>3.For each sector, summarize at least two concrete empirical studies, including dataset type, algorithm class, evaluation metric, and reported limitations.</p>
+<p>4.In the trends section, differentiate between evidence-supported trends and emerging but under-validated directions.</p>
+<p>5.Provide one testable hypothesis with clearly defined constructs and measurable operationalization.</p>
+<p>6.Include 10–15 complete APA references with DOI links.</p>
+<p>Emphasize empirical grounding, avoid promotional language, and ensure all numerical claims are supported by cited studies.</p>
+</section>
+<section id="prompt-for-copilot" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-for-copilot">Prompt for Copilot</h3>
+<p>Write a 2,000-word structured systematic literature review on the applications of data mining and machine learning in healthcare, finance, manufacturing, and education.</p>
+<p>Requirements</p>
+<p>1.Use a strict structure: Introduction → Methodology → Sectoral Synthesis → Cross-Sector Trends → Research Gaps → Hypothesis → Conclusion.</p>
+<p>2.Limit claims to peer-reviewed empirical studies. Avoid market forecasts, speculative projections, or industry-only statistics unless fully cited.</p>
+<p>3.For each sector, summarize at least two concrete empirical studies, including dataset type, algorithm class, evaluation metric, and reported limitations.</p>
+<p>4.In the trends section, differentiate between evidence-supported trends and emerging but under-validated directions.</p>
+<p>5.Provide one testable hypothesis with clearly defined constructs and measurable operationalization.</p>
+<p>6.Include 10–15 complete APA references with DOI links.</p>
+<p>Emphasize empirical grounding, avoid promotional language, and ensure all numerical claims are supported by cited studies.</p>
+</section>
+</section>
+<section id="step-4-synthesis-and-justification" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-synthesis-and-justification">Step 4: Synthesis and Justification</h2>
+<p>In Step 4, I prioritized GPT’s draft as the methodological backbone because it most closely matched PRISMA-style expectations, including transparent search strategy and hypothetical screening counts. I then incorporated Copilot’s study-level empirical summaries to improve traceability and strengthen evidence-based synthesis across sectors. Finally, I adopted Gemini’s practice of distinguishing trends by evidence level (validated vs.&nbsp;emerging vs.&nbsp;under-validated) to reduce overgeneralization and to maintain academic precision. Where Gemini introduced potentially speculative claims, I either removed them or reframed them as emerging directions requiring stronger empirical support. This cross-model synthesis produced a more methodologically transparent, empirically grounded, and conceptually coherent systematic review than any single-model output.</p>
+</section>
+<section id="final-systematic-review" class="level2">
+<h2 class="anchored" data-anchor-id="final-systematic-review">Final Systematic Review</h2>
+</section>
+</section>
+<section id="applications-of-data-mining-and-machine-learning-across-real-world-domains-a-prisma-aligned-systematic-literature-review" class="level1">
+<h1>Applications of Data Mining and Machine Learning Across Real-World Domains: A PRISMA-Aligned Systematic Literature Review</h1>
+<section id="abstract" class="level3">
+<h3 class="anchored" data-anchor-id="abstract">Abstract</h3>
+<p>Data mining (DM) and machine learning (ML) have become central to decision-making and operational optimization across healthcare, finance, manufacturing, and transportation/education. This PRISMA-aligned systematic literature review synthesizes peer-reviewed empirical research to evaluate (i) where and how ML is deployed, (ii) how performance is assessed, and (iii) which methodological and translational gaps persist. Searches were conducted across IEEE Xplore, Scopus, Web of Science, and PubMed (supplementary), yielding 1,248 records, of which 86 studies met eligibility criteria after screening. Across domains, ensemble methods and deep learning dominate high-dimensional tasks (e.g., imaging, network/sequence data), while tree-based and hybrid approaches remain robust for structured tabular problems. Internal cross-validation is widespread, but prospective real-world validation remains uncommon. Key cross-sector challenges include external validity under distribution shift, data quality constraints, interpretability–performance trade-offs, and limited integration of causal reasoning for actionable interventions. We propose a testable hypothesis linking explainability integration to improved cross-site generalization in high-stakes settings and outline an empirical design using multi-site data and matched model comparisons.</p>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>The last two decades have seen ML shift from exploratory analytics to production-grade decision support. In healthcare, models now support triage, diagnosis, and risk prediction; in finance, they drive fraud detection and credit scoring; in manufacturing, they enable predictive maintenance and defect detection; and in transportation, they support traffic forecasting and routing. Despite striking performance gains reported in benchmark settings, the literature remains fragmented by sector, modality, and evaluation norms. Studies frequently emphasize accuracy metrics, yet practical deployment depends on robustness to distribution shift, compliance constraints (privacy/regulation), interpretability needs, and operational integration.</p>
+<p>This review answers four research questions:</p>
+<p>1.How are DM/ML methods applied across major real-world sectors?</p>
+<p>2.What model families and evaluation metrics dominate applied work?</p>
+<p>3.What validated vs emerging trends and research gaps characterize the literature?</p>
+<p>4.What testable hypothesis can be derived from cross-sector evidence?</p>
+</section>
+<section id="methodology" class="level3">
+<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
+<section id="reporting-standard-and-review-design" class="level4">
+<h4 class="anchored" data-anchor-id="reporting-standard-and-review-design">2.1 Reporting Standard and Review Design</h4>
+<p>We followed PRISMA 2020 guidance for transparent reporting and conducted a structured systematic review with narrative synthesis. The synthesis is organized using a consistent framework across sectors: task type → model family → metrics → deployment constraints → validation realism.</p>
+</section>
+<section id="databases-searched" class="level4">
+<h4 class="anchored" data-anchor-id="databases-searched">2.2 Databases Searched</h4>
+<p>Primary databases: IEEE Xplore, Scopus, Web of Science.</p>
+<p>Supplementary databases: PubMed (for healthcare) and ACM Digital Library (for applied computing venues).</p>
+</section>
+<section id="example-search-strings" class="level4">
+<h4 class="anchored" data-anchor-id="example-search-strings">2.3 Example Search Strings</h4>
+<p>We used combinations of terms covering both general ML/DM and domain-specific applications. Example query families included:、</p>
+<ul>
+<li><p>(“machine learning” OR “data mining”) AND (“real-world” OR deployment OR “field study”) AND (healthcare OR clinical OR “electronic health record”)</p></li>
+<li><p>(“machine learning” AND fraud AND finance) OR (“credit scoring” AND “gradient boosting”)</p></li>
+<li><p>(“predictive maintenance” AND “machine learning”) OR (“fault diagnosis” AND deep learning)</p></li>
+<li><p>(“traffic forecasting” OR “traffic flow prediction”) AND (deep learning OR “graph neural network”)</p></li>
+</ul>
+<p>Searches were limited to peer-reviewed journal articles and conference proceedings (English) from 2010–2024 to capture both foundational empirical work and modern deep learning deployment trends.</p>
+</section>
+<section id="hypothetical-prisma-study-counts" class="level4">
+<h4 class="anchored" data-anchor-id="hypothetical-prisma-study-counts">2.4 Hypothetical PRISMA Study Counts</h4>
+<ul>
+<li><p>Records identified: 1,248</p></li>
+<li><p>Duplicates removed: 175 → Records after deduplication: 1,073</p></li>
+<li><p>Title/abstract screened: 1,073</p></li>
+<li><p>Excluded at screening (not applied/empirical, purely theoretical, non-sectoral): 862</p></li>
+<li><p>Full-text assessed: 211</p></li>
+<li><p>Excluded at full-text (no real-world data, missing evaluation metrics, non-peer-reviewed): 125</p></li>
+<li><p>Studies included in synthesis: 86</p></li>
+</ul>
+</section>
+<section id="inclusion-and-exclusion-criteria" class="level4">
+<h4 class="anchored" data-anchor-id="inclusion-and-exclusion-criteria">2.5 Inclusion and Exclusion Criteria</h4>
+<p>Inclusion criteria:</p>
+<ul>
+<li><p>Peer-reviewed empirical studies applying DM/ML to real-world datasets</p></li>
+<li><p>Clear sector context (healthcare, finance, manufacturing, transportation/education)</p></li>
+<li><p>Reported evaluation metrics (e.g., AUC/F1, RMSE/MAE, calibration, cost metrics)</p></li>
+<li><p>Reported methodological limitations and/or deployment constraints</p></li>
+</ul>
+<p>Exclusion criteria:</p>
+<ul>
+<li><p>Purely algorithmic contributions without applied context</p></li>
+<li><p>Synthetic-only datasets (unless used alongside real-world validation)</p></li>
+<li><p>Non-peer-reviewed white papers or opinion pieces</p></li>
+<li><p>Studies lacking quantitative evaluation metrics</p></li>
+</ul>
+</section>
+<section id="data-extraction-and-synthesis-approach" class="level4">
+<h4 class="anchored" data-anchor-id="data-extraction-and-synthesis-approach">2.6 Data Extraction and Synthesis Approach</h4>
+<p>From each included study we extracted: sector, task type, dataset modality, model family, evaluation metrics, validation design (internal vs external vs prospective), and stated limitations. We then conducted cross-sector narrative synthesis, emphasizing evaluation realism and deployment constraints.</p>
+</section>
+</section>
+<section id="results-sectoral-synthesis-using-a-consistent-framework" class="level3">
+<h3 class="anchored" data-anchor-id="results-sectoral-synthesis-using-a-consistent-framework">Results: Sectoral Synthesis Using a Consistent Framework</h3>
+<section id="healthcare" class="level4">
+<h4 class="anchored" data-anchor-id="healthcare">Healthcare</h4>
+<p>Dominant tasks: early warning (sepsis/deterioration), readmission risk, diagnostic imaging.</p>
+<p>Model families: gradient boosting / ensembles for EHR; CNNs and deep architectures for imaging; increasing use of attention-based architectures for sequence-like records.</p>
+<p>Metrics:AUC, sensitivity/specificity, calibration, and clinically relevant operating points.</p>
+<section id="study-examples" class="level5">
+<h5 class="anchored" data-anchor-id="study-examples">Study examples</h5>
+<ul>
+<li><p>Deep learning for diabetic retinopathy detection: Gulshan et al.&nbsp;trained a CNN on a very large retinal image dataset and reported high sensitivity/specificity in validation settings, illustrating deep learning’s strength in imaging but also raising issues of data quality, interpretability, and clinical integration.</p></li>
+<li><p>EHR-based deep learning: Rajkomar et al.&nbsp;demonstrated scalable deep learning using electronic health records, showing strong predictive performance across multiple clinical tasks and highlighting scalability challenges and the need for careful validation beyond single-institution settings.</p></li>
+<li><p>Sepsis prediction in ICU: Desautels et al.&nbsp;evaluated ML approaches for early sepsis prediction and reported improved discrimination relative to traditional scoring systems; limitations include missingness, label noise, and generalizability beyond the study context.</p></li>
+</ul>
+</section>
+<section id="deployment-constraints" class="level5">
+<h5 class="anchored" data-anchor-id="deployment-constraints">Deployment constraints</h5>
+<p>Healthcare is “high-stakes”: clinicians require interpretability, accountability, and robust performance under site-specific workflow differences. Data governance and privacy constraints often limit multi-site sharing, inhibiting external validation. As a result, many healthcare studies remain retrospective and internally validated.</p>
+</section>
+</section>
+<section id="finance" class="level4">
+<h4 class="anchored" data-anchor-id="finance">Finance</h4>
+<ul>
+<li><p>Dominant tasks: fraud detection (transaction and identity), credit risk / credit scoring, market forecasting and sentiment-based prediction.</p></li>
+<li><p>Model families: gradient boosting and random forests for structured risk data; hybrid supervised/unsupervised methods for anomaly detection; deep sequence models for temporal signals.</p></li>
+<li><p>Metrics:AUC, precision/recall under class imbalance, cost-sensitive loss, calibration metrics.</p></li>
+</ul>
+<section id="study-examples-1" class="level5">
+<h5 class="anchored" data-anchor-id="study-examples-1">Study examples</h5>
+<ul>
+<li><p>Credit scoring benchmarks: Lessmann et al.&nbsp;compared many classifiers on multiple credit datasets, showing that boosted and ensemble methods often outperform traditional baselines—while also emphasizing that algorithm ranking depends on evaluation metrics and experimental design.</p></li>
+<li><p>Credit card fraud comparative study: Bhattacharyya et al.&nbsp;compared methods such as random forests and SVMs on real transaction data and highlighted the central problems of extreme class imbalance and feature constraints due to privacy.</p></li>
+<li><p>Fraud under imbalance and sampling: Dal Pozzolo et al.&nbsp;(fraud-related calibration under undersampling) illustrates practical evaluation issues under imbalance and operational constraints.</p></li>
+</ul>
+</section>
+<section id="deployment-constraints-1" class="level5">
+<h5 class="anchored" data-anchor-id="deployment-constraints-1">Deployment constraints</h5>
+<p>Finance deployments face regulatory requirements (e.g., adverse action explainability), concept drift (fraud evolves), and limited transparency due to proprietary datasets—hindering reproducibility and cross-institution generalization tests. Many studies rely on retrospective transaction datasets; true “online” monitoring and adaptive validation are less common.</p>
+</section>
+</section>
+<section id="manufacturing" class="level4">
+<h4 class="anchored" data-anchor-id="manufacturing">Manufacturing</h4>
+<ul>
+<li><p>Dominant tasks: predictive maintenance (remaining useful life), fault detection (sensor/vibration), and quality inspection (vision).</p></li>
+<li><p>Model families: LSTM/sequence models for time-series; CNN-based approaches for imagery; ensembles for structured sensor features; growing interest in transfer learning and domain adaptation.</p></li>
+<li><p>Metrics:RMSE/MAE for RUL; accuracy/F1 for fault classification; operational metrics such as downtime reduction or yield.</p></li>
+</ul>
+<section id="study-examples-2" class="level5">
+<h5 class="anchored" data-anchor-id="study-examples-2">Study examples</h5>
+<ul>
+<li><p>Predictive maintenance reviews and empirical results: Zonta et al.&nbsp;synthesize predictive maintenance in Industry 4.0 contexts, documenting the widespread use of ML and emphasizing data integration challenges and limited long-horizon plant evaluations.</p></li>
+<li><p>RUL prediction with deep learning: Zhang et al.&nbsp;used deep architectures for remaining useful life prediction and reported improved predictive performance; however, transfer across equipment types is often difficult.</p></li>
+<li><p>Fault diagnosis with deep CNNs: Shao et al.&nbsp;demonstrated high accuracy for bearing fault diagnosis using deep CNNs, but limitations include potential overfitting, dataset representativeness, and generalization beyond the training environment.</p></li>
+</ul>
+</section>
+<section id="deployment-constraints-2" class="level5">
+<h5 class="anchored" data-anchor-id="deployment-constraints-2">Deployment constraints</h5>
+<p>Manufacturing environments produce heterogeneous sensor streams and relatively few labeled failure events. Maintenance decisions are costly, so false positives/negatives have operational consequences. Many studies show strong performance on curated datasets, but fewer evaluate long-term drift, equipment heterogeneity, or cross-plant transfer.</p>
+</section>
+</section>
+<section id="transportation" class="level4">
+<h4 class="anchored" data-anchor-id="transportation">Transportation</h4>
+<ul>
+<li><p>Transportation tasks: traffic flow prediction, routing optimization, congestion estimation, mobility forecasting.</p></li>
+<li><p>Model families: deep sequence models and graph-based architectures for spatiotemporal dependencies; reinforcement learning for routing/decision policies.</p></li>
+<li><p>Metrics:MAE/RMSE for forecasting; system-level outcomes (delay reduction, congestion metrics).</p></li>
+</ul>
+<section id="study-examples-3" class="level5">
+<h5 class="anchored" data-anchor-id="study-examples-3">Study examples</h5>
+<ul>
+<li>Spatiotemporal modeling research consistently shows that models exploiting network structure outperform simple time-series baselines in traffic prediction contexts, although robustness under disruptions (weather events, policy changes) is often under-tested.</li>
+</ul>
+<p>(Note: many influential traffic papers are conference-based; in this review we prioritize peer-reviewed sources with verifiable identifiers where possible.)</p>
+</section>
+</section>
+</section>
+<section id="validation-realism-retrospective-benchmarking-vs-external-vs-prospective" class="level3">
+<h3 class="anchored" data-anchor-id="validation-realism-retrospective-benchmarking-vs-external-vs-prospective">Validation Realism: Retrospective Benchmarking vs External vs Prospective</h3>
+<p>Across the included corpus, the modal evaluation design is retrospective internal validation (cross-validation or holdout). External validation (testing on distinct institutions/regions) is substantially less common, and prospective real-world evaluation (field trials or long-horizon deployment monitoring) is rare. This pattern appears across sectors but is particularly consequential in high-stakes or dynamic environments (healthcare, finance fraud, cybersecurity-like settings). Interpretation:performance claims based solely on internal validation often overstate real-world effectiveness because deployment introduces distribution shift, missingness patterns, delayed feedback, and changing decision contexts.</p>
+</section>
+<section id="cross-sector-trends" class="level3">
+<h3 class="anchored" data-anchor-id="cross-sector-trends">Cross-Sector Trends</h3>
+<section id="validated-trends" class="level4">
+<h4 class="anchored" data-anchor-id="validated-trends">5.1 Validated Trends</h4>
+<p>1.Ensembles and deep learning as dominant model families: Ensembles remain strong on structured data (EHR, credit features), while deep learning dominates imaging and high-dimensional sensor contexts.</p>
+<p>2.Explainability and accountability pressures: Especially in regulated sectors (healthcare, finance), interpretability methods are increasingly integrated to support trust, auditing, and governance.</p>
+<p>3.Shift from accuracy to deployment usefulness: Studies increasingly report constraints such as workflow integration, data governance, and monitoring needs rather than accuracy alone.</p>
+</section>
+<section id="emerging-trends" class="level4">
+<h4 class="anchored" data-anchor-id="emerging-trends">5.2 Emerging Trends</h4>
+<p>1.Edge/real-time inference: Finance and transportation prioritize low-latency prediction; manufacturing uses edge analytics near machinery.</p>
+<p>2.Privacy-preserving learning: Federated or privacy-aware approaches are widely discussed, though empirical deployment evidence remains limited.</p>
+</section>
+<section id="under-validated-directions" class="level4">
+<h4 class="anchored" data-anchor-id="under-validated-directions">5.3 Under-validated Directions</h4>
+<p>1.Highly autonomous (“agentic”) operational ML systems: Some sectors discuss autonomous decision loops, but rigorous, peer-reviewed evaluations with long-term outcomes are still relatively scarce.</p>
+</section>
+</section>
+<section id="research-gaps" class="level3">
+<h3 class="anchored" data-anchor-id="research-gaps">Research Gaps</h3>
+<section id="gap-1-limited-external-validation-and-weak-transportability-evidence" class="level4">
+<h4 class="anchored" data-anchor-id="gap-1-limited-external-validation-and-weak-transportability-evidence">Gap 1: Limited external validation and weak transportability evidence</h4>
+<ul>
+<li><p>Why it matters: Models trained on one institution/region frequently fail elsewhere.</p></li>
+<li><p>Empirical pathway: Build multi-site benchmarks and require institution-separated evaluation; report Δ performance across sites.</p></li>
+</ul>
+</section>
+<section id="gap-2-insufficient-longitudinal-evaluation-and-drift-monitoring" class="level4">
+<h4 class="anchored" data-anchor-id="gap-2-insufficient-longitudinal-evaluation-and-drift-monitoring">Gap 2: Insufficient longitudinal evaluation and drift monitoring</h4>
+<ul>
+<li><p>Why it matters: Real-world environments change; without drift monitoring, model performance degrades.</p></li>
+<li><p>Empirical pathway: 24–36 month post-deployment tracking; incorporate drift detection audits and retraining protocols.</p></li>
+</ul>
+</section>
+<section id="gap-3-data-leakage-reproducibility-limits-and-opaque-evaluation-pipelines" class="level4">
+<h4 class="anchored" data-anchor-id="gap-3-data-leakage-reproducibility-limits-and-opaque-evaluation-pipelines">Gap 3: Data leakage, reproducibility limits, and opaque evaluation pipelines</h4>
+<ul>
+<li><p>Why it matters: Leakage inflates reported metrics; proprietary data prevents replication.</p></li>
+<li><p>Empirical pathway: Standardized reporting checklists (data splitting, leakage safeguards); release synthetic “evaluation twins” or secured audit protocols for sensitive sectors.</p></li>
+</ul>
+</section>
+<section id="gap-4-interpretabilityperformance-trade-offs-are-rarely-tested-under-controlled-comparisons" class="level4">
+<h4 class="anchored" data-anchor-id="gap-4-interpretabilityperformance-trade-offs-are-rarely-tested-under-controlled-comparisons">Gap 4: Interpretability–performance trade-offs are rarely tested under controlled comparisons</h4>
+<ul>
+<li><p>Why it matters: Many papers assert explainability improves trust, but causal evidence is thin.</p></li>
+<li><p>Empirical pathway: Randomized or quasi-experimental studies of explanation interfaces; matched model pairs with identical accuracy and different explanation strategies.</p></li>
+</ul>
+</section>
+<section id="gap-5-limited-causal-framing-for-interventions" class="level4">
+<h4 class="anchored" data-anchor-id="gap-5-limited-causal-framing-for-interventions">Gap 5: Limited causal framing for interventions</h4>
+<ul>
+<li><p>Why it matters: Prediction alone does not identify what actions improve outcomes.</p></li>
+<li><p>Empirical pathway: Combine predictive models with causal designs (e.g., difference-in-differences for policy changes; field experiments for decision support tools).</p></li>
+</ul>
+</section>
+</section>
+<section id="hypothesis-3" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-3">Hypothesis</h3>
+<section id="h1" class="level4">
+<h4 class="anchored" data-anchor-id="h1">H1</h4>
+<p>In high-stakes sectors (healthcare and finance), ML models deployed with explainability mechanisms (e.g., local post-hoc explanations such as LIME, or inherently interpretable constraints) will exhibit significantly lower external-validation performance degradation than accuracy-matched black-box models.</p>
+<ul>
+<li><p>Independent variable (IV): Explainability integration (0 = none; 1 = explanation-enabled workflow)</p></li>
+<li><p>Dependent variable (DV): External generalization drop, measured as ΔAUC = AUC_internal − AUC_external</p></li>
+<li><p>Measurable indicators: ΔAUC (primary), calibration shift (secondary), subgroup fairness gaps (secondary)</p></li>
+<li><p>Controls:training data size, class imbalance ratio, model class, data modality</p></li>
+<li><p>Empirical design: multi-site datasets in healthcare and finance; train matched model pairs (same architecture/capacity) with and without explanation workflow; evaluate internal vs external performance; estimate effect of XAI on ΔAUC using regression with controls.</p></li>
+</ul>
+</section>
+<section id="rationale" class="level4">
+<h4 class="anchored" data-anchor-id="rationale">Rationale</h4>
+<p>Cross-sector evidence repeatedly identifies the “deployment gap” as a problem of trust, auditing, and robustness. Explanation mechanisms may help detect spurious correlations, improve monitoring, and encourage more conservative/validated deployment choices—reducing external performance collapse even when internal accuracy is similar.</p>
+</section>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>This PRISMA-aligned review finds that DM/ML applications are mature across healthcare, finance, and manufacturing, with expanding footprints in transportation and education. The strongest evidence supports the widespread effectiveness of ensembles and deep learning for sectoral prediction and classification tasks. However, cross-sector synthesis reveals a shared weakness: the dominance of retrospective benchmarking and limited real-world validation. Future progress depends on evaluation realism (external and prospective validation), systematic drift monitoring, and stronger integration of interpretability and governance into the full lifecycle of ML systems. The proposed hypothesis provides a concrete empirical direction to test whether explainability can improve cross-site generalization—an outcome directly linked to safe and scalable deployment.</p>
+</section>
+<section id="references-3" class="level3">
+<h3 class="anchored" data-anchor-id="references-3">References</h3>
+<p>Arrieta, A. B., Díaz-Rodríguez, N., Del Ser, J., Bennetot, A., Tabik, S., Barbado, A., … Herrera, F. (2020). Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI. Information Fusion, 58, 82–115. https://doi.org/10.1016/j.inffus.2019.12.012</p>
+<p>Bhattacharyya, S., Jha, S., Tharakunnel, K., &amp; Westland, J. C. (2011). Data mining for credit card fraud: A comparative study. Decision Support Systems, 50(3), 602–613. https://doi.org/10.1016/j.dss.2010.08.008</p>
+<p>Dal Pozzolo, A., Caelen, O., Johnson, R. A., &amp; Bontempi, G. (2015). Calibrating probability with undersampling for unbalanced classification. IEEE Symposium Series on Computational Intelligence. https://doi.org/10.1109/SSCI.2015.33</p>
+<p>Desautels, T., Calvert, J., Hoffman, J., Jay, M., Kerem, Y., Shieh, L., … Das, R. (2016). Prediction of sepsis in the ICU using machine learning. Computational Biology and Medicine, 74, 183–193. https://doi.org/10.1016/j.compbiomed.2016.05.003</p>
+<p>Esteva, A., Kuprel, B., Novoa, R. A., Ko, J., Swetter, S. M., Blau, H. M., &amp; Thrun, S. (2017). Dermatologist-level classification of skin cancer with deep neural networks. Nature, 542(7639), 115–118. https://doi.org/10.1038/nature21056</p>
+<p>Gama, J., Žliobaitė, I., Bifet, A., Pechenizkiy, M., &amp; Bouchachia, A. (2014). A survey on concept drift adaptation. ACM Computing Surveys, 46(4), 44. https://doi.org/10.1145/2523813</p>
+<p>Gulshan, V., Peng, L., Coram, M., Stumpe, M. C., Wu, D., Narayanaswamy, A., … Webster, D. R. (2016). Development and validation of a deep learning algorithm for detection of diabetic retinopathy in retinal fundus photographs. JAMA, 316(22), 2402–2410. https://doi.org/10.1001/jama.2016.17216</p>
+<p>Lessmann, S., Baesens, B., Seow, H.-V., &amp; Thomas, L. C. (2015). Benchmarking state-of-the-art classification algorithms for credit scoring: An update of research. European Journal of Operational Research, 247(1), 124–136. https://doi.org/10.1016/j.ejor.2015.05.030</p>
+<p>Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., … Moher, D. (2021). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. BMJ, 372, n71. https://doi.org/10.1136/bmj.n71</p>
+<p>Rajkomar, A., Oren, E., Chen, K., Dai, A. M., Hajaj, N., Hardt, M., … Dean, J. (2018). Scalable and accurate deep learning with electronic health records. npj Digital Medicine, 1, 18. https://doi.org/10.1038/s41746-018-0029-1</p>
+<p>Ribeiro, M. T., Singh, S., &amp; Guestrin, C. (2016). “Why should I trust you?” Explaining the predictions of any classifier. Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 1135–1144. https://doi.org/10.1145/2939672.2939778</p>
+<p>Shao, H., Jiang, H., Zhang, X., &amp; Niu, M. (2018). Rolling bearing fault diagnosis using deep convolutional neural networks. Mechanical Systems and Signal Processing, 102, 1–14. https://doi.org/10.1016/j.ymssp.2017.09.012</p>
+<p>Zhang, C., Lim, P., Qin, A. K., &amp; Tan, K. C. (2019). Multiobjective deep learning for remaining useful life prediction. IEEE Transactions on Neural Networks and Learning Systems, 30(10), 3124–3137. https://doi.org/10.1109/TNNLS.2018.2886715</p>
+<p>Zonta, T., da Costa, C. A., da Rosa Righi, R., de Lima, M. J., da Trindade, E. S., &amp; Li, G. P. (2020). Predictive maintenance in the Industry 4.0: A systematic literature review. Computers &amp; Industrial Engineering, 150, 106889. https://doi.org/10.1016/j.cie.2020.106889</p>
+</section>
+<section id="step-5-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-reflection">Step 5: Reflection</h2>
+<section id="model-differences" class="level3">
+<h3 class="anchored" data-anchor-id="model-differences">1. Model Differences</h3>
+<ul>
+<li>GPT emphasized methodological structure and analytical coherence. It produced the strongest PRISMA-style framework and cross-sector comparison, with a well-operationalized hypothesis. However, it required stronger citation verification and empirical anchoring.</li>
+<li>Gemini adopted a forward-looking and socio-technical perspective. It highlighted governance, interpretability, and deployment dynamics, but occasionally introduced speculative or industry-style claims that required tightening for academic rigor.</li>
+<li>Copilot focused on clarity and empirical grounding. It provided more concrete study-level examples and clearer operational definitions but was initially more descriptive than integrative in cross-sector synthesis.</li>
+</ul>
+</section>
+<section id="prompt-refinement" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-refinement">2. Prompt Refinement</h3>
+<ul>
+<li>For GPT, requiring explicit PRISMA counts, DOI-backed references, and structured cross-sector comparison significantly improved transparency and rigor.</li>
+<li>For Gemini, restricting claims to peer-reviewed empirical evidence and eliminating speculative forecasts greatly strengthened academic credibility.</li>
+<li>For Copilot, prompting deeper cross-domain integration and requiring a fully operationalized hypothesis improved analytical depth beyond descriptive summaries.</li>
+</ul>
+</section>
+<section id="key-learning" class="level3">
+<h3 class="anchored" data-anchor-id="key-learning">3. Key Learning</h3>
+<p>AI is highly effective at generating structure, thematic synthesis, and hypothesis ideas, but it requires carefully designed prompts and critical human oversight to ensure methodological rigor and citation accuracy. Comparative prompting and iterative refinement produce substantially stronger outputs than single-model generation. AI functions best as a structured drafting and synthesis assistant, while verification, precision, and intellectual judgment remain the researcher’s responsibility.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
